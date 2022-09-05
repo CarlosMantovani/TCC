@@ -9,19 +9,18 @@
 	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
 
     <title>Tela Cadastro</title>
-	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <script src="https://kit.fontawesome.com/c620f812f4.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body style="background-color: #011936;">
 	
-	<div class="container">
+	<div class="container" style="overflow-y: auto">
 		<div class="img">
 			<img src="img/undraw_online_cv_re_gn0a.svg">
 		</div>
 		<div class="login-content">
 			<form method="post" action="autenticacao.php">
-				<img src="">
 				<h2 class="title">Cadastre-se</h2>
            		<div class="input-div one">
            		   <div class="i">
@@ -34,16 +33,16 @@
            		</div>
                    <div class="input-div one">
                     <div class="i">
-                            <i class="fas fa-user"></i>
+                        <i class="fa-regular fa-address-card"></i>
                     </div>
                     <div class="div">
                             <h5>CPF</h5>
-                            <input  name="email" type="text" class="input" id="email" required>
+                            <input  name="email" type="text" class="input" id="cpf" maxlength="14" onKeyUp="FormataCPF(this,event)" required>
                     </div>
                  </div>
                  <div class="input-div one">
                     <div class="i">
-                            <i class="fas fa-user"></i>
+                        <i class="fa-regular fa-at"></i>
                     </div>
                     <div class="div">
                             <h5>Email</h5>
@@ -52,35 +51,39 @@
                  </div>
                  <div class="input-div one">
                     <div class="i">
-                            <i class="fas fa-user"></i>
+                        <i class="fa-solid fa-calendar-days"></i>
                     </div>
                     <div class="div">
-                            <h5>Data de </h5>
-                            <input  name="email" type="datetime" class="input" id="email" required>
+                            <h5>Data De Nascimento </h5>
+                            <input  name="email" type="datetime" class="input" id="email" maxlength="10" onKeyUp="Formatadata(this,event)" required>
                     </div>
                  </div>
-                 <div class="input-div one">
+                 <!--<div class="input-div one">
                     <div class="i">
                             <i class="fas fa-user"></i>
                     </div>
                    <input type="checkbox" class="check">      
-               
+                   <input type="checkbox" class="check">-->
                  <div class="input-div one">
                     <div class="i">
-                            <i class="fas fa-user"></i>
+                        <i class="fa-solid fa-phone"></i>
                     </div>
                     <div class="div">
                             <h5>Telefone</h5>
-                            <input  name="email" type="text" class="input" id="email" required>
+                            <input  name="email" type="text" class="input" id="telefone" required>
                     </div>
                  </div>
+                 <div class="input-div one">
+                        <div class="i">
+                                <i class="fa-solid fa-key"></i>
+                        </div>
            		   <div class="div">
            		    	<h5>Senha</h5>
            		    	<input name="senha" type="password" class="input" id="senha" required>
             	   </div>
             	</div>
-            	<a href="#">Esqueceu senha?</a>
-            	<input type="submit" class="btn" value="Entrar" name="entrar">
+            	 <span>Ja possui conta: <a href="#">Entrar</a> </span>
+            	<input type="submit" class="btn" value="Cadastrar" name="entrar">
             </form>
         </div>
     </div>
