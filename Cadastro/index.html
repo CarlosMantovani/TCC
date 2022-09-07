@@ -58,19 +58,13 @@
                             <input  name="email" type="datetime" class="input" id="email" maxlength="10" onKeyUp="Formatadata(this,event)" required>
                     </div>
                  </div>
-                 <!--<div class="input-div one">
-                    <div class="i">
-                            <i class="fas fa-user"></i>
-                    </div>
-                   <input type="checkbox" class="check">      
-                   <input type="checkbox" class="check">-->
                  <div class="input-div one">
                     <div class="i">
                         <i class="fa-solid fa-phone"></i>
                     </div>
                     <div class="div">
                             <h5>Telefone</h5>
-                            <input  name="email" type="text" class="input" id="telefone" required>
+                            <input  name="email" type="text" class="input" id="telefone" required maxlength="16" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);">
                     </div>
                  </div>
                  <div class="input-div one">
@@ -82,10 +76,16 @@
            		    	<input name="senha" type="password" class="input" id="senha" required>
             	   </div>
             	</div>
+                <div id="chekbox">
+                    Masculino<input type="radio" class="radio" name="sexo" style="margin-right: 4%">      
+                    Feminino <input type="radio" class="radio" name="sexo">
+                  </div>
             	 <span>Ja possui conta: <a href="#">Entrar</a> </span>
             	<input type="submit" class="btn" value="Cadastrar" name="entrar">
             </form>
         </div>
+
+
     </div>
     <script src="main.js"></script>
 </body>
