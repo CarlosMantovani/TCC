@@ -1,0 +1,31 @@
+
+
+
+
+
+.flexBox{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+padding: 1%;
+    
+}
+.card{
+    margin: 22px;
+}
+.card-body{
+    border: solid;
+}
+.list-group {
+border-left: solid;
+border-right: solid;
+border-bottom: solid;
+
+}
+
+.card-fotter{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
