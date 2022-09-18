@@ -13,6 +13,12 @@ function remcl(){
 	}
 }
 
+
+inputs.forEach(input => {
+	input.addEventListener("focus", addcl);
+	input.addEventListener("blur", remcl);
+});
+
 function FormataCPF(){   
 
     var cpf = document.getElementById('cpf')
@@ -23,14 +29,6 @@ function FormataCPF(){
 	}
     
 }
-
-
-inputs.forEach(input => {
-	input.addEventListener("focus", addcl);
-	input.addEventListener("blur", remcl);
-});
-
-
 
 function Formatadata(Campo, teclapres) {
 	
