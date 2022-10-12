@@ -1,0 +1,42 @@
+body {
+    background-color: #011936;
+    min-height: 100vh;
+}
+.flex-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card {
+    background-color: #2952a3;
+    display: inline-block;
+    box-shadow: 5px 6px 16px 0px black;
+    border-radius: 5px;
+   font-size: large;
+   width: 36%;
+}
+#botao {
+    display: flex;
+    justify-content: space-around;
+   
+}
+p{
+    margin-bottom: 3%;
+}
+a{ 
+    width: 34%;
+  
+    background-image: linear-gradient(to right, #1A2980 3.32%, #1E499C 37.56%);
+}
+a:hover{
+    position: relative;
+    top: 2px;
+    box-shadow: 2px 2px 0px 0px black;
+}
+img{
+   
+    height: 275px;
+
+}

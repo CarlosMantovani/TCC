@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  
+  
+  .navigation {
+    position: fixed;
+    inset: 180px 0 180px 10px;
+    width: 75px;
+    background-image: linear-gradient(to top, #1A2980 3.32%, #1E499C 37.56%, #26D0CE 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+  }
+
+  .navigation ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0%;
+  }
+  
+  
+  .navigation ul li a .icon {
+    position: relative;
+    line-height: 60px;
+    color: #222;
+    font-size: 1.75em;
+  }
+  
+  .fa-house:hover{
+    position: relative;
+    transition: 0.5s;
+    left: 4px;
+  }
+  
+  .fa-right-from-bracket:hover{
+    position: relative;
+    transition: 0.5s;
+    left: 4px;
+  }

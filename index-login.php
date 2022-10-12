@@ -1,12 +1,11 @@
 
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <html>
 <head>
 
 	<link rel="stylesheet" href="reset.css">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="style-cadastro.css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
 
     <title>loguin</title>
@@ -21,15 +20,15 @@
 			<img src="img/undraw_secure_login_pdn4.svg">
 		</div>
 		<div class="login-content">
-			<form method="post" action="autenticacao.php">
+			<form method="post" action="autenticacaoAluno.php">
 				<img src="">
 				<h2 class="title">Bem Vindo</h2>
            		<div class="input-div one">
            		   <div class="i">
-           		   		<i class="fas fa-user"></i>
+					  <i class="fa-solid fa-at"></i>
            		   </div>
            		   <div class="div">
-           		   		<h5>Usuario</h5>
+           		   		<h5>Email</h5>
            		   		<input  name="email" type="text" class="input" id="email" required>
            		   </div>
            		</div>
@@ -42,11 +41,11 @@
            		    	<input name="senha" type="password" class="input" id="senha" required>
             	   </div>
             	</div>
-            	<a href="#">Esqueceu senha?</a>
+            	
             	<input type="submit" class="btn" value="Entrar" name="entrar">
             </form>
         </div>
     </div>
-    <script src="main.js"></script>
+    <script src="main-login.js"></script>
 </body>
 </html>

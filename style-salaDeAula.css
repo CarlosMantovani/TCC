@@ -6,7 +6,7 @@
 
 
 body{
-    background-color: #011936; 
+    background-color: #011937; 
     min-height: 100vh;
 }
 .flexBox{
@@ -16,6 +16,7 @@ body{
     justify-content: center;
     padding: 5%;
 }
+
 .card{
     margin: 22px;
     border: 5px solid black;
@@ -41,9 +42,7 @@ h5{
     height: 114%;
    
 }
-.list-group-item{
-    background-color: #8AB3D8;
-}
+
 .card-fotter{
     display: flex;
     justify-content: space-evenly;
@@ -54,3 +53,22 @@ h5{
  a i{
     color: black;
  }
+.list-group-item{
+    background: rgba( 255, 255, 255, 0.05 );
+backdrop-filter: blur( 2px );
+-webkit-backdrop-filter: blur( 2px );
+}
+.label-float{
+    background: rgba( 255, 255, 255, 0.05 );
+    backdrop-filter: blur( 2px );
+    -webkit-backdrop-filter: blur( 2px );
+}
+#center{
+    display: flex;
+    justify-content: center;
+    background: rgba( 255, 255, 255, 0.05 );
+    backdrop-filter: blur( 2px );
+    -webkit-backdrop-filter: blur( 2px );
+    margin:0;
+    padding: 5px;
+}
