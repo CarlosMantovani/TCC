@@ -29,7 +29,7 @@ if (isset($_POST['OK'])) {
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style-turma.css">
   <link rel="stylesheet" href="style-sideBar.css">
-  <link rel="stylesheet" href="style-cad-more.css">
+  
   <link rel="stylesheet" href="style-salaDeAula.css">
   <script src="https://kit.fontawesome.com/c620f812f4.js" crossorigin="anonymous"></script>
 
@@ -48,10 +48,14 @@ if (isset($_POST['OK'])) {
           </a>
         </li>
         <li class="list-item"><a href="#">
-            <span class="icon">
-              <i class="fa-regular fa-circle-user"></i>
-            </span>
-          </a>
+          <?php
+          //session_start();
+          if (isset($_SESSION['prof_imagem'])) {
+          ?>
+            <img src="uploads/<?php echo $_SESSION['prof_imagem'] ?>" width="40" height="40" style="border-radius: 50%;">
+            <?php } else { ?>
+              <span class="icon"><i class="fa-regular fa-user"></i></span>
+            <?php } ?>
         </li>
         <li class="list-item"><a href="sair.php">
             <span class="icon">
@@ -66,7 +70,7 @@ if (isset($_POST['OK'])) {
 
       <div class="overlay-content">
         <form method="post">
-          <div class="card" style="width: 35rem; margin: 20px;
+          <div class="card" id = "card-1"style="width: 35rem; margin: 20px;
     border: 5px solid black;
     height: 26rem;
     background: rgba( 255, 255, 255, 0.05 );
@@ -82,7 +86,8 @@ backdrop-filter: blur( 2px );
 backdrop-filter: blur( 2px );
 -webkit-backdrop-filter: blur( 2px );
  ">
-              <p class="card-text">Criar Turma</p>
+               <span id="i" onclick="closeNav()" ><i class="fa-solid fa-xmark fa-2xl"></i> </span> 
+                <p class="card-text" style="display: inline-block;">Criar Turma</p>
             </div>
             <ul class="list-group list-group-flush">
               <div class="label-float">
@@ -131,13 +136,19 @@ backdrop-filter: blur( 2px );
     <div class="flexBox">
       <?php
       $conexao = mysqli_connect('127.0.0.1', 'root', '', 'hereiam');
-      $sql = "select * from turma";
+      $sql = "select * from turma where Prof_idProf = " . $_SESSION['prof_id']; 
       $resultado = mysqli_query($conexao, $sql);
 
       while ($linha = mysqli_fetch_array($resultado)) :
       ?>
         <div class="card" style="width: 18rem;">
           <div class="card-body">
+          <p><abbr title="Codigo Da Turma">
+            Cod:<?php
+                     echo $linha['idturma'];
+                    ?>
+                    </p>
+          </abbr>
             <h5 class="card-title" style="text-align: center">
               <?php
               switch ($linha['curso']) {
@@ -151,15 +162,18 @@ backdrop-filter: blur( 2px );
                   $curso = "Química";
                   break;
               }
-              echo $linha['serie'] . "ºAno" . " - " . $linha['nome'] . " - " . $curso ?></h5>
+              $disc = $linha['serie'] . "ºAno" . " - " . $linha['nome'] . " - " . $curso ;
+
+              echo $disc;
+              ?></h5>
           </div>
 
           <ul class="list-group list-group-flush">
             <li class="list-group-item">
               <div class="card-fotter">
-                <a href="lista-aluno.php" class="card-link"><i class="fa-solid fa-users fa-2x "></i> </a>
+                <a href="lista-aluno.php?idturma=<?= $linha['idturma'] ?>&disc=<?= $disc ?>" class="card-link"><i class="fa-solid fa-users fa-2x "></i> </a>
                 <a href="validacao" class="card-link"><i class="fa-regular fa-circle-check fa-2x  "></i></a>
-                <a href="relatorio" class="card-link"><i class="fa-regular fa-newspaper fa-2x "></i></a>
+                <a href="relatorioAluno.php?idturma=<?= $linha['idturma'] ?>&disc=<?= $disc ?>" class="card-link"><i class="fa-regular fa-newspaper fa-2x "></i></a>
               </div>
             </li>
           </ul>

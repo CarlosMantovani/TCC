@@ -59,9 +59,12 @@ function validaCPF($cpf) {
 
     return $returner;
 }
-
+    
 if (isset($_POST['cadastrar'])) {
+    $diretorio = "../uploadsAluno/";
+    $arquivoDestino = $diretorio . $_FILES['imagem']['name'];
 
+    if (move_uploaded_file($_FILES['imagem']['tmp_name'], $arquivoDestino)) {   
         $nome = $_POST['nome'];
         $cpf = $_POST['cpf'] ;
         $email = $_POST['email'];
@@ -69,19 +72,19 @@ if (isset($_POST['cadastrar'])) {
         $senha= $_POST['senha'];	
         $sexo= $_POST[ 'sexo'];
         $telefone= $_POST[ 'telefone'];
-        
+        $imagem = $_FILES['imagem']['name'];
+
+       
         if (!validaCPF($cpf)) {
             $mensagem = "CPF inválido.";
         } else {
-            $sql = "insert into aluno (nome, cpf, email, data_nasc, senha, sexo, telefone) 
-                        values ('$nome','$cpf', '$email', '$data_nasc', '$senha','$sexo', '$telefone')";
-
+            $sql = "insert into aluno (nome, cpf, email, data_nasc, senha, sexo, telefone,imagem) 
+                        values ('$nome','$cpf', '$email', '$data_nasc', '$senha','$sexo', '$telefone', '$imagem')";
             mysqli_query($conexao, $sql);
             header("location: index-login.php");
         }
-        
-    } 
-
+    }
+}
 
 
 ?>
@@ -96,6 +99,7 @@ if (isset($_POST['cadastrar'])) {
 	<link rel="stylesheet" href="reset.css">
 	<link rel="stylesheet" type="text/css" href="style-cadastro.css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    
 
     <title>Tela Cadastro</title>
     <script src="https://kit.fontawesome.com/c620f812f4.js" crossorigin="anonymous"></script>
@@ -103,11 +107,18 @@ if (isset($_POST['cadastrar'])) {
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body style="background-color: #011936;">
-	
-    <?php if (isset($mensagem)) { ?>
-        <h2><?= $mensagem ?></h2>
-    <?php } ?>
 
+    <div class="alerta" >
+    <?php if (isset($mensagem)) { ?>
+        <i class="fa-sharp fa-solid fa-xmark" style= "position: absolute;
+    top: 6px;
+    left: 46%;
+    font-size: 21px;
+    border-radius: 19px;"></i> <h2><?= $mensagem ?></h2>
+        <?php } ?>
+</div>
+
+   
 	<div class="container" style="overflow-y: auto">
 		<div class="img">
 			<img src="img/undraw_online_cv_re_gn0a.svg">
@@ -148,7 +159,7 @@ if (isset($_POST['cadastrar'])) {
                     </div>
                     <div class="div">
                             <h5>Data De Nascimento </h5>
-                            <input  name="data_nasc" type="text" class="input" id="data_nasc" maxlength="10"  onkeypress="mascaraData( this, event)" required>
+                            <input  name="data_nasc" type="text" class="input" id="data_nasc" maxlength="10"  onkeypress="mascaraData( this, event)" required minlength="10">
                     </div>
                  </div>
                  <div class="input-div one">
@@ -157,7 +168,7 @@ if (isset($_POST['cadastrar'])) {
                     </div>
                     <div class="div">
                             <h5>Telefone</h5>
-                            <input  name="telefone" type="text" class="input" id="telefone" onkeypress="mask(this, mphone)" required maxlength="16"  >
+                            <input  name="telefone" type="text" class="input" id="telefone" onkeypress="mask(this, mphone)" required maxlength="16" required  minlength="16">
                     </div>
                  </div>
                  <div class="input-div one">
@@ -166,16 +177,20 @@ if (isset($_POST['cadastrar'])) {
                         </div>
            		   <div class="div">
            		    	<h5>Senha</h5>
-           		    	<input name="senha" type="password" class="input" id="senha" required>
+           		    	<input name="senha" type="password" class="input" id="senha" required minlength="8">
             	   </div>
             	</div>
-                <div id="chekbox">
+                <div class="mb-3">
+                <label for="imagem" class="form-label">Foto De Perfil</label>
+                <input type="file" name="imagem" id="imagem" class="form-control">
+            </div>
+                <div id="chekbox" >
                     Masculino<input type="radio" class="radio" name="sexo" value="masculino" style="margin-right: 4%">      
                     Feminino <input type="radio" class="radio" name="sexo" value="feminino" >
                   </div>
                   
             	 <span>Ja possui conta: <a href="index-login.php">Entrar</a></span>
-            	<input type="submit" class="btn" value="cadastrar" name="cadastrar">
+            	<input type="submit" class="btn" value="cadastrar" name="cadastrar" required>
             </form>
         </div>
 

@@ -5,11 +5,11 @@
 <head>
 
 	<link rel="stylesheet" href="reset.css">
-	<link rel="stylesheet" type="text/css" href="style-cadastro.css">
+	<link rel="stylesheet" type="text/css" href="style-login.css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
 
     <title>loguin</title>
-	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<script src="https://kit.fontawesome.com/c620f812f4.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>

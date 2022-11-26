@@ -5,8 +5,6 @@
     font-family: 'Poppins', sans-serif;
   }
   
-  
-  
   .navigation {
     position: fixed;
     inset: 180px 0 180px 10px;
@@ -43,4 +41,51 @@
     position: relative;
     transition: 0.5s;
     left: 4px;
+  }
+
+  @media screen and (min-width:1366px){
+    .navigation {
+      inset: 240px 0 240px 10px;
+    
+    }
+
+  }
+  @media screen and (min-width: 1023px) and (max-width:1366px){    
+    .navigation {
+      inset: 236px 0 165px 10px;
+    
+    }
+  }
+  @media screen and (min-width:767px) and (max-width: 1023px) {
+    .navigation {
+      inset: 295px 0 295px 10px;
+    }
+  }
+  @media screen and (min-width:589px) and (max-width: 767px){
+    .navigation {
+      inset: 295px 0 295px 10px;
+    }
+  }
+  @media screen and (max-width:481px )and (max-height:768px){
+    .navigation {
+      inset: 295px 0 295px 10px;
+    }
+  }
+  @media screen and (min-width:375px)and (max-width:589px){
+    .navigation {
+      inset: 295px 0 295px 10px;
+    }
+  }
+  @media screen and (max-width:375px){
+    .navigation {
+      inset: 230px 0 230px 5px;
+      position: fixed;
+      width: 65px;
+      background-image: linear-gradient(to top, #1A2980 3.32%, #1E499C 37.56%, #26D0CE 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 30px;
+    }
+    
   }

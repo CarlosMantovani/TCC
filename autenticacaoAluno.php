@@ -16,10 +16,10 @@ if(isset($_POST['entrar'])):
         $linha = mysqli_fetch_assoc($resultado);
 
         session_start();
-        $_SESSION['aluno_id'] = $linha['id'];
+        $_SESSION['aluno_id'] = $linha['idaluno'];
         $_SESSION['aluno_nome'] = $linha['nome'];
-    
-        header("location: salaDeAula-aluno.html");
+        $_SESSION['aluno_imagem'] = $linha['imagem'];
+        header("location: salaDeAulaAluno.php");
     }else{
         $mensagem = "Usuario/Senha invalidos";
     header("location: index.php?mensagem={$mensagem}");

@@ -13,7 +13,7 @@ if(isset($_POST['entrar'])):
         $linha = mysqli_fetch_assoc($resultado);
 
         session_start();
-        $_SESSION['adm_id'] = $linha['id_adm'];
+        $_SESSION['adm_id'] = $linha['idadm'];
         $_SESSION['adm_senha'] = $linha['senha'];
     
         header("location: cadastroProf.php");

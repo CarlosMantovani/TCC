@@ -1,19 +1,27 @@
 <?php require_once("verificaAdm.php") ?>
 <?php
-if (isset($_POST['cadastrar'])) {
 $conexao = mysqli_connect('127.0.0.1', 'root', '', 'hereiam');
-$nome = $_POST['nome'];
-$email = $_POST['email'];
-$siape = $_POST['siape'];
-$senha= $_POST['senha'];	
+if (isset($_POST['cadastrar'])) {
 
+    $diretorio = "../uploads/";
+    $arquivoDestino = $diretorio . $_FILES['imagem']['name'];
+    if (move_uploaded_file($_FILES['imagem']['tmp_name'], $arquivoDestino)) {   
 
-    $sql = "insert into prof (nome, email, siape, senha) 
-                values ('$nome', '$email', '$siape', '$senha')";
+        $nome = $_POST['nome'];
+        $email = $_POST['email'];
+        $siape = $_POST['siape'];
+        $senha= $_POST['senha'];	
+        $imagem = $_FILES['imagem']['name'];
 
-    mysqli_query($conexao, $sql);
-    header("location: index.php");
-
+        $sql = "insert into prof (nome, email, siape, senha, imagem) 
+                    values ('$nome', '$email', '$siape', '$senha', '$imagem')";
+        //die($sql);
+        mysqli_query($conexao, $sql);
+        header("location: index.php");
+    }
+    else {
+        $mensagem = "ERRO AO CADASTRAR USUÁRIO. IMAGEM NÃO ENVIADA.";
+    }
 } 
 ?>
 
@@ -41,7 +49,7 @@ $senha= $_POST['senha'];
 		</div>
        
 		<div class="login-content">
-			<form method="post" action=""> 
+			<form method="post" action="" enctype="multipart/form-data"> 
 				<h2 class="title">Cadastre-se</h2>
            		<div class="input-div one">
            		   <div class="i">
@@ -71,7 +79,10 @@ $senha= $_POST['senha'];
                             <input  name="siape" type="text" class="input" id="siape" maxlength="14" onKeyPress="FormataCPF()" required>
                     </div>
                  </div>
-                
+                 <div class="mb-3">
+                <label for="imagem" class="form-label">Imagem</label>
+                <input type="file" name="imagem" id="imagem" class="form-control">
+            </div>
                  <div class="input-div one">
                         <div class="i">
                                 <i class="fa-solid fa-key"></i>

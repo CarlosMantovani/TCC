@@ -1,14 +1,19 @@
-*{
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-}
+
 
 body{
     font-family: 'Poppins', sans-serif;
     overflow: hidden;
 }
-
+.alerta{
+	display: flex;
+    justify-content: center;
+}
+.alerta h2{
+	width: 37%;
+    line-height: 33px;
+    background-color: #fff3cd;
+    text-align: center;
+}
 .wave{
 	position: fixed;
 	bottom: 0;
@@ -180,6 +185,17 @@ a{
 a:hover{
 	color:#2952a3;
 
+}
+
+.mb-3{
+	display: inline-block;
+    width: 100%;
+    text-align: left;
+    color: #999;
+    font-size: 0.9rem;
+    transition: .3s;
+    color: rgb(226, 223, 223);
+    margin-bottom: 1em;
 }
 
 .btn{
