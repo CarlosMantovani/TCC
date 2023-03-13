@@ -15,6 +15,8 @@
 </head>
 <body style="background-color: #011936;">
 	
+	
+	?> 
 	<div class="container">
 		<div class="img">
 			<img src="../img/undraw_secure_login_pdn4.svg">

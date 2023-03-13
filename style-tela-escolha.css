@@ -1,8 +1,27 @@
-@media screen and (min-width:1366px){
+@import url('https://fonts.googleapis.com/css2?family= Roboto: wght @300 & display=swap');
+
+h5 {
+    font-family: 'Roboto', sem serifa;
+    color: white;
+
+}
+
+p {
+    font-family: 'Roboto', sem serifa;
+    color: white;
+}
+
+.card-body {
+    font-family: 'Roboto', sem serifa;
+
+}
+
+@media screen and (min-width:1366px) {
     body {
         background-color: #011936;
     }
-    .flex-card{
+
+    .flex-card {
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -10,40 +29,48 @@
         flex-wrap: wrap;
         margin-top: 158px;
     }
+
     .card {
         background-color: #2952a3;
         display: inline-block;
         box-shadow: 5px 6px 16px 0px black;
         border-radius: 5px;
         font-size: large;
-        width: 47%;
+        width: 44%;
         text-align: center;
     }
+
     #botao {
         display: flex;
         justify-content: space-around;
     }
-    p{
+
+    p {
         margin-bottom: 3%;
     }
-    a{ 
+
+    a {
         width: 34%;
         background-image: linear-gradient(to right, #1A2980 3.32%, #1E499C 37.56%);
     }
-    a:hover{
+
+    a:hover {
         position: relative;
         top: 2px;
         box-shadow: 2px 2px 0px 0px black;
     }
-    img{
+
+    img {
         height: 275px;
     }
 }
-@media screen and (min-width: 1023px) and (max-width:1366px){    
+
+@media screen and (min-width: 1023px) and (max-width:1366px) {
     body {
         background-color: #011936;
     }
-    .flex-card{
+
+    .flex-card {
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -51,35 +78,41 @@
         flex-wrap: wrap;
         margin-top: 103px;
     }
+
     .card {
         background-color: #2952a3;
         display: inline-block;
         box-shadow: 5px 6px 16px 0px black;
         border-radius: 5px;
         font-size: large;
-        width: 47%;
+        width: 44%;
         text-align: center;
     }
+
     #botao {
         display: flex;
         justify-content: space-around;
-       
+
     }
-    p{
+
+    p {
         margin-bottom: 3%;
     }
-    a{ 
+
+    a {
         width: 34%;
         background-image: linear-gradient(to right, #1A2980 3.32%, #1E499C 37.56%);
     }
-    a:hover{
+
+    a:hover {
         position: relative;
         top: 2px;
         box-shadow: 2px 2px 0px 0px black;
     }
-    img{
+
+    img {
         height: 275px;
-    } 
+    }
 }
 
 @media screen and (min-width:767px) and (max-width: 1023px) {
@@ -87,7 +120,8 @@
         background-color: #011936;
         min-height: 100vh;
     }
-    .flex-card{
+
+    .flex-card {
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -95,42 +129,50 @@
         flex-wrap: wrap;
         margin-top: 59px
     }
+
     .card {
         background-color: #2952a3;
         display: inline-block;
         box-shadow: 5px 6px 16px 0px black;
         border-radius: 5px;
-       font-size: large;
-       width: 36%;
-       margin-top: 10px;
-       text-align: center;
+        font-size: large;
+        width: 36%;
+        margin-top: 10px;
+        text-align: center;
     }
+
     #botao {
         display: flex;
         justify-content: space-around;
     }
-    p{
+
+    p {
         margin-bottom: 3%;
     }
-    a{ 
+
+    a {
         width: 89px;
         background-image: linear-gradient(to right, #1A2980 3.32%, #1E499C 37.56%);
     }
-    a:hover{
+
+    a:hover {
         position: relative;
         top: 2px;
         box-shadow: 2px 2px 0px 0px black;
     }
-    img{
+
+    img {
         height: 251px;
     }
 }
-@media screen and (min-width:589px) and (max-width: 767px){ 
+
+@media screen and (min-width:589px) and (max-width: 767px) {
     body {
         background-color: #011936;
         min-height: 100vh;
     }
-    .flex-card{
+
+    .flex-card {
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -138,47 +180,55 @@
         flex-wrap: wrap;
         margin-top: 59px
     }
+
     .card {
         background-color: #2952a3;
         display: inline-block;
         box-shadow: 5px 6px 16px 0px black;
         border-radius: 5px;
-       font-size: large;
-       width: 58%;
-       margin-bottom: 68px;
-       text-align: center;
+        font-size: large;
+        width: 58%;
+        margin-bottom: 68px;
+        text-align: center;
     }
+
     #botao {
         display: flex;
         justify-content: space-around;
     }
-    #botao1{
+
+    #botao1 {
         margin: 0px;
     }
-    p{
+
+    p {
         margin-bottom: 3%;
     }
-    a{ 
+
+    a {
         width: 89px;
         height: 38px;
         background-image: linear-gradient(to right, #1A2980 3.32%, #1E499C 37.56%);
     }
-    
-    a:hover{
+
+    a:hover {
         position: relative;
         top: 2px;
         box-shadow: 2px 2px 0px 0px black;
     }
-    img{
+
+    img {
         height: 251px;
     }
 }
-@media screen and (max-width:481px )and (max-height:768px){
+
+@media screen and (max-width:481px)and (max-height:768px) {
     body {
         background-color: #011936;
         min-height: 100vh;
     }
-    .flex-card{
+
+    .flex-card {
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -186,43 +236,54 @@
         flex-wrap: wrap;
         margin-top: 59px
     }
+
     .card {
         background-color: #2952a3;
         display: inline-block;
         box-shadow: 5px 6px 16px 0px black;
         border-radius: 5px;
-       font-size: large;
-       width: 93%;
-       margin-bottom: 68px;
-       text-align: center;
+        font-size: large;
+        width: 93%;
+        margin-bottom: 68px;
+        text-align: center;
     }
+
     #botao {
         display: flex;
-        justify-content: space-around; 
+        justify-content: space-around;
     }
-    p{
+
+    p {
         margin-bottom: 3%;
     }
-    a{ 
+
+    a {
         width: 89px;
         background-image: linear-gradient(to right, #1A2980 3.32%, #1E499C 37.56%);
     }
-    #botao1{margin-top: 18px;}
-    a:hover{
+
+    #botao1 {
+        margin-top: 18px;
+    }
+
+    a:hover {
         position: relative;
         top: 2px;
         box-shadow: 2px 2px 0px 0px black;
     }
-    img{
+
+    img {
         height: 251px;
     }
 }
-@media screen and (min-width:375px)and (max-width:589px){
+
+@media screen and (min-width:375px)and (max-width:589px) {
     body {
         background-color: #011936;
         min-height: 100vh;
     }
-    .flex-card{
+
+    .flex-card {
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -230,95 +291,116 @@
         flex-wrap: wrap;
         margin-top: 59px
     }
+
     .card {
         background-color: #2952a3;
         display: inline-block;
         box-shadow: 5px 6px 16px 0px black;
         border-radius: 5px;
-       font-size: large;
-       width: 93%;
-       margin-bottom: 68px;
-       text-align: center;
+        font-size: large;
+        width: 93%;
+        margin-bottom: 68px;
+        text-align: center;
     }
+
     #botao {
         display: flex;
         justify-content: space-around;
     }
-    p{
+
+    p {
         margin-bottom: 3%;
     }
-    a{ 
+
+    a {
         width: 89px;
         background-image: linear-gradient(to right, #1A2980 3.32%, #1E499C 37.56%);
     }
-    #botao1{width: 83px;
-    margin-top: 0;}
-    a:hover{
-        position: relative;
-        top: 2px;
-        box-shadow: 2px 2px 0px 0px black;
-    }
-    img{
-        height: 251px;
-    }
-}
-@media screen and (max-width:375px){
-    body {
-        background-color: #011936;
-        min-height: 100vh;
-    }
-    .flex-card{
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin-top: 59px
-    }
-    .card {
-        background-color: #2952a3;
-    display: inline-block;
-    box-shadow: 5px 6px 16px 0px black;
-    border-radius: 5px;
-    font-size: large;
-    width: 93%;
-    height: 289px;
-    margin-bottom: 68px;
-    text-align: center;
-    }
-    .card-title{
-        font-size: 20px;
-    }
-    .card-text{
-        font-size: 15px;
-    }
-    #botao {
-        display: flex;
-        justify-content: space-around;
-    }
-    #botao1{
-        width:88px;
+
+    #botao1 {
+        width: 83px;
         margin-top: 0;
     }
-    p{
+
+    a:hover {
+        position: relative;
+        top: 2px;
+        box-shadow: 2px 2px 0px 0px black;
+    }
+
+    img {
+        height: 251px;
+    }
+}
+
+@media screen and (max-width:375px) {
+    body {
+        background-color: #011936;
+        min-height: 100vh;
+    }
+
+    .flex-card {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 59px
+    }
+
+    .card {
+        background-color: #2952a3;
+        display: inline-block;
+        box-shadow: 5px 6px 16px 0px black;
+        border-radius: 5px;
+        font-size: large;
+        width: 93%;
+        height: 289px;
+        margin-bottom: 68px;
+        text-align: center;
+    }
+
+    .card-title {
+        font-size: 20px;
+    }
+
+    .card-text {
+        font-size: 15px;
+    }
+
+    #botao {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #botao1 {
+        width: 88px;
+        margin-top: 0;
+    }
+
+    p {
         margin-bottom: 3%;
     }
-    a{ 
+
+    a {
         width: 70px;
         font-size: 15px;
         height: 25px;
         background-image: linear-gradient(to right, #1A2980 3.32%, #1E499C 37.56%);
     }
-    span{
+
+    span {
         position: relative;
         bottom: 6px;
     }
-    a:hover{
+
+    a:hover {
         position: relative;
         top: 2px;
         box-shadow: 2px 2px 0px 0px black;
     }
-    img{
+
+    img {
         height: 120px
     }
 }

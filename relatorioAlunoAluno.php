@@ -1,4 +1,3 @@
-<?php require_once("verificaAutenticacaoProf.php") ?>
 <?php
 $conexao = mysqli_connect('127.0.0.1', 'root', '', 'hereiam');
 $datainicial = "Total";
@@ -9,8 +8,8 @@ if (isset($_POST['Buscar'])) {
   $data = date('d-m-Y');
   $datainicial = $_POST["datainicial"];
   $datafinal = $_POST["datafinal"];
-  date('d-m-Y', strtotime($datainicial));
-  date('d-m-Y', strtotime($datafinal));
+  date('Y-m-d', strtotime($datainicial));
+  date('Y-m-d', strtotime($datafinal));
 
   $WHERE = " AND data1 BETWEEN '{$datainicial}' AND '{$datafinal}' ";
 }
@@ -47,35 +46,36 @@ $resultado = mysqli_query($conexao, $sql);
 </head>
 
 <body style="background-color: #011936;">
-
     <div class="navigation">
         <ul class="list">
-            <li class="list-item"><a href="salaDeAula.php">
+            <li class="list-item"><a href="salaDeAulaAluno.php">
                     <span class="icon">
                     <abbr title="Voltar A Home"><i class="fa-solid fa-house"></i></abbr>
                     </span>
                 </a>
             </li>
-            <li class="list-item">
-                <?php
-        if (isset($_SESSION['prof_imagem'])) {
-        ?>
-                <a href="profile.php?idaluno=<?= $_SESSION['prof_imagem'] ?>"> <img
-                        src="uploads/<?php echo $_SESSION['prof_imagem'] ?>" width="40" height="40"
-                        style="border-radius: 50%;"></a>
-                <?php } else { ?>
-                imagem
-                <?php } ?>
-            </li>
-            <li class="list-item"><a href="index.php">
+            <abbr title="Alterar Perfil">
+                <li class="list-item"><a href="#">
+                        <?php
+                          session_start();
+                          if (isset($_SESSION['aluno_imagem'])) {
+                          ?><a href="profile.php?idaluno=<?= $_SESSION['aluno_id']?>"> <img
+                                src="uploads/<?php echo $_SESSION['aluno_imagem'] ?>" width="40" height="40"
+                                style="border-radius: 50%;"> </a>
+                        <?php } else { ?>
+                        <span class="icon"><i class="fa-regular fa-user"></i></span>
+                        <?php } ?>
+                    </a>
+                </li>
+            </abbr>
+            <li class="list-item"><a href="sair.php">
                     <span class="icon">
-                        <i class="fa-solid fa-right-from-bracket"></i>
+                    <abbr title="Fechar Sistema"><i class="fa-solid fa-right-from-bracket"></i></abbr>
                     </span>
                 </a>
             </li>
         </ul>
     </div>
-
     <div class="container">
 
         <div class="flex">
@@ -91,18 +91,9 @@ $resultado = mysqli_query($conexao, $sql);
                         <th scope="col">Nome</th>
                         <th scope="col">Email</th>
                         <th scope="col">Numero De Presenças</th>
-                            <th scope="col">Data Inicial <input id="datainicial" name="datainicial" type='date'
-                                    min="2013-12-01" max="local"></th>
-                        <th scope="col">Data Final <input id="datafinal" name="datafinal" type='date' min="2013-12-01"
-                                max="local"></th>
+                        <th scope="col">Data Inicial <input id="datainicial" name="datainicial" type='date'></th>
+                        <th scope="col">Data Final <input id="datafinal" name="datafinal" type='date'></th>
                         <th scope="col"><input type="submit" class="button3" value="Buscar" name="Buscar"></th>
-                        <th scope="col"><button type="button" style="width: 43px;
-    height: 30px;
-    font-size: 22px;
-    color: white;
-    background-image: linear-gradient(to top, #1A2980 3.32%, #1E499C 37.56%, #26D0CE 100%);
-    border: none;" onclick="printQ()"><i class="fa-solid fa-print"></i></button></th>
-    
                     </tr>
                 </thead>
             </form>
@@ -140,9 +131,7 @@ $resultado = mysqli_query($conexao, $sql);
     </div>
 
     <script>
-    function printQ() {
-        window.print();
-    }
+    //window.print()
     </script>
 
 </body>

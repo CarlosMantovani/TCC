@@ -1,155 +1,171 @@
-* { 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+ @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-
-body{
-    background-color: #011936; 
-    min-height: 100vh;
-}
-.flex{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 5%;
-   
-}
-.card{
-    margin: 20px;
-    border: 5px solid black;
-    height: 29rem;
-    box-shadow: 6px 6px 0px 0px rgb(0 0 0 / 54%);
-    border-radius: 4%;
-    background-color: #8AB3D8;
-}
-
-
-.card-body{
-    display: flex;
-    justify-content: center;  
-    border-radius: 10px;
-    
-}
-p{
-  line-height: 36px;
-  color: black;
-  font-size: 1em;
-  position: fixed;
-}
-
-#i{
-line-height: 36px;
-color: black;
-margin-right: 94%;
-}
-.list-group-item{
-    background-color: #8AB3D8;
-}
-.form-control{
-    text-align: -webkit-right;
-}
-
- .card-link{
-    text-decoration: none;
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
  }
-  
- 
-.label-float input{
-    
-    font-size: 16px;
-    transition: all .3s ease-out;
-    border-radius: 10px;
-    
+
+ .tr {
+     font-family: 'Roboto', sem serifa;
+ }
+
+ .card-body {
+     font-family: 'Roboto', sem serifa;
+
+ }
 
 
-}
+ body {
+     background-color: #011936;
+     min-height: 100vh;
+ }
 
-.label-float input:focus{
-  border-bottom: 2px solid #3951b2;
-}
+ .flex {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: center;
+     padding: 5%;
 
-.label-float input::placeholder{
-  color:transparent;
-}
+ }
 
-.label-float label{
- 
-    position: absolute;
-    top: 0;
-    left: 22px;
-    margin-top: 22px;
-    transition: all .3s ease-out;
-  
-}
-
-
-.label-float input:focus + label,
-.label-float input:not(:placeholder-shown) + label{
-  font-size: 15px;
-  margin-top: 10px;
-  color: #3951b2;
-}
-.form-select{
-margin-bottom: 8px;
-}
-
-.btn{
-    background-image: linear-gradient(to right, #1A2980 3.32%, #1E499C 37.56%);
-    --bs-btn-border-color:none;
-    color: white;
-}
-
-.card-header{
-    background-color: #8AB3D8;
-    border-radius: 1%;
-    border: none;
-}
-
-.overlay {
-  
-    height: 100%; 
-    width: 0;
-    position: fixed;
-    z-index: 1;
- 
-    left: 0;
-    overflow-x: hidden;
-    transition: 0.5s;
-}
-.overlay-content {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-}
+ .card {
+     margin: 20px;
+     border: 5px solid black;
+     height: 29rem;
+     box-shadow: 6px 6px 0px 0px rgb(0 0 0 / 54%);
+     border-radius: 4%;
+     background-color: #8AB3D8;
+ }
 
 
-@media screen and (min-width:1366px){
-  }
-  @media screen and (min-width: 1023px) and (max-width:1366px){    
-    
-  }
-  @media screen and (min-width:767px) and (max-width: 1023px) {
-    
-  }
-  @media screen and (min-width:589px) and (max-width: 767px){
-    
-  }
-  @media screen and (max-width:481px )and (max-height:768px){
-   
-  }
-  @media screen and (min-width:375px)and (max-width:589px){
-    
-  }
-  @media screen and (max-width:375px){
-  }
-@media screen and (max-height: 450px) {
-  .overlay a {font-size: 20px}
-  .overlay .closebtn {
-  font-size: 40px;
-  top: 15px;
-  right: 35px;
-  }
-}
+ .card-body {
+     display: flex;
+     justify-content: center;
+     border-radius: 10px;
+
+ }
+
+ p {
+     line-height: 36px;
+     color: black;
+     font-size: 1em;
+     position: fixed;
+ }
+
+ #i {
+     line-height: 36px;
+     color: black;
+     margin-right: 94%;
+ }
+
+ .list-group-item {
+     background-color: #8AB3D8;
+ }
+
+ .form-control {
+     text-align: -webkit-right;
+ }
+
+ .card-link {
+     text-decoration: none;
+ }
+
+
+ .label-float input {
+
+     font-size: 16px;
+     transition: all .3s ease-out;
+     border-radius: 10px;
+
+
+
+ }
+
+ .label-float input:focus {
+     border-bottom: 2px solid #3951b2;
+ }
+
+ .label-float input::placeholder {
+     color: transparent;
+ }
+
+ .label-float label {
+
+     position: absolute;
+     top: 0;
+     left: 22px;
+     margin-top: 22px;
+     transition: all .3s ease-out;
+
+ }
+
+
+ .label-float input:focus+label,
+ .label-float input:not(:placeholder-shown)+label {
+     font-size: 15px;
+     margin-top: 10px;
+     color: #3951b2;
+ }
+
+ .form-select {
+     margin-bottom: 8px;
+ }
+
+ .btn {
+     background-image: linear-gradient(to right, #1A2980 3.32%, #1E499C 37.56%);
+     --bs-btn-border-color: none;
+     color: white;
+ }
+
+ .card-header {
+     background-color: #8AB3D8;
+     border-radius: 1%;
+     border: none;
+ }
+
+ .overlay {
+
+     height: 100%;
+     width: 0;
+     position: fixed;
+     z-index: 1;
+
+     left: 0;
+     overflow-x: hidden;
+     transition: 0.5s;
+ }
+
+ .overlay-content {
+     margin-top: 30px;
+     display: flex;
+     justify-content: center;
+ }
+
+
+ @media screen and (min-width:1366px) {}
+
+ @media screen and (min-width: 1023px) and (max-width:1366px) {}
+
+ @media screen and (min-width:767px) and (max-width: 1023px) {}
+
+ @media screen and (min-width:589px) and (max-width: 767px) {}
+
+ @media screen and (max-width:481px)and (max-height:768px) {}
+
+ @media screen and (min-width:375px)and (max-width:589px) {}
+
+ @media screen and (max-width:375px) {}
+
+ @media screen and (max-height: 450px) {
+     .overlay a {
+         font-size: 20px
+     }
+
+     .overlay .closebtn {
+         font-size: 40px;
+         top: 15px;
+         right: 35px;
+     }
+ }

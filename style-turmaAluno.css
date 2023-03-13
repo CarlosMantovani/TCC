@@ -1,95 +1,101 @@
-* { 
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 
-body{
-    background-color: #011936; 
+body {
+    background-color: #011936;
     min-height: 100vh;
 }
-.flex{
+
+.flex {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     padding: 5%;
-   
+
 }
-.card{
+
+.card {
     width: 29rem;
     margin: 20px;
     border: 5px solid black;
     height: 12rem;
-    background: rgba( 255, 255, 255, 0.05 );
-    backdrop-filter: blur( 2px );
-    -webkit-backdrop-filter: blur( 2px );
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
 }
 
 
-.card-body{
+.card-body {
     display: flex;
-    justify-content: center;  
+    justify-content: center;
     border-radius: 10px;
-    
+
 }
-p{
-  line-height: 36px;
+
+p {
+    line-height: 36px;
 }
-.list-group-item{
+
+.list-group-item {
     background-color: #8AB3D8;
 }
-.form-control{
+
+.form-control {
     text-align: -webkit-right;
 }
 
- .card-link{
+.card-link {
     text-decoration: none;
- }
-  
- 
-.label-float input{
-    
+}
+
+
+.label-float input {
+
     font-size: 16px;
     transition: all .3s ease-out;
     border-radius: 10px;
-    
+
 
 
 }
 
-.label-float input:focus{
-  border-bottom: 2px solid #3951b2;
+.label-float input:focus {
+    border-bottom: 2px solid #3951b2;
 }
 
-.label-float input::placeholder{
-  color:transparent;
+.label-float input::placeholder {
+    color: transparent;
 }
 
-.label-float label{
- 
+.label-float label {
+
     position: absolute;
     top: 0;
     left: 22px;
     margin-top: 22px;
     transition: all .3s ease-out;
-  
+
 }
 
 
-.label-float input:focus + label,
-.label-float input:not(:placeholder-shown) + label{
-  font-size: 15px;
-  margin-top: 10px;
-  color: #3951b2;
-}
-.form-select{
-margin-bottom: 8px;
+.label-float input:focus+label,
+.label-float input:not(:placeholder-shown)+label {
+    font-size: 15px;
+    margin-top: 10px;
+    color: #3951b2;
 }
 
-.btn{
+.form-select {
+    margin-bottom: 8px;
+}
+
+.btn {
     background-image: linear-gradient(to right, #1A2980 3.32%, #1E499C 37.56%);
-    --bs-btn-border-color:none;
+    --bs-btn-border-color: none;
     color: white;
 }

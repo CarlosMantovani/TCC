@@ -18,7 +18,9 @@ if(isset($_POST['entrar'])):
     
         header("location: cadastroProf.php");
     }else{
-        $mensagem = "Senha invalida";
-    header("location: index.php?mensagem={$mensagem}");
+        echo '<script>
+        window.location.href="../PastaADM/index.php";
+        alert("Senha/Usuario Incorreto");
+</script>';
     }
 endif;

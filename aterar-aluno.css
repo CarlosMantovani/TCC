@@ -1,21 +1,21 @@
-*{
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-}
-input:-webkit-autofill {
-	-webkit-text-fill-color: #555 !important;
-	-webkit-box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0) inset;
-	transition: background-color 5000s ease-in-out 0s;
-
+body {
+	font-family: 'Poppins', sans-serif;
+	overflow: hidden;
 }
 
-body{
-    font-family: 'Poppins', sans-serif;
-    overflow: hidden;
+.alerta {
+	display: flex;
+	justify-content: center;
 }
 
-.wave{
+.alerta h2 {
+	width: 37%;
+	line-height: 33px;
+	background-color: #fff3cd;
+	text-align: center;
+}
+
+.wave {
 	position: fixed;
 	bottom: 0;
 	left: 0;
@@ -23,77 +23,77 @@ body{
 	z-index: -1;
 }
 
-.container{
-    width: 100vw;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap :7rem;
-    padding: 0 2rem;
+.container {
+	width: 100vw;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 7rem;
+	padding: 0 2rem;
 }
 
-.img{
+.img {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
 }
 
-.login-content{
+.login-content {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 	text-align: center;
 }
 
-.img img{
+.img img {
 	width: 500px;
 }
 
-form{
+form {
 	width: 360px;
 }
 
-.login-content img{
-    height: 100px;
+.login-content img {
+	height: 100px;
 }
 
-.login-content h2{
+.login-content h2 {
 	margin: 31px 0;
 	color: rgb(226, 223, 223);
 	text-transform: uppercase;
 	font-size: 2.9rem;
 }
 
-.login-content .input-div{
+.login-content .input-div {
 	position: relative;
-    display: grid;
-    grid-template-columns: 7% 93%;
-    margin: 25px 0;
-    padding: 5px 0;
-    border-bottom: 2px solid #d9d9d9;
+	display: grid;
+	grid-template-columns: 7% 93%;
+	margin: 25px 0;
+	padding: 5px 0;
+	border-bottom: 2px solid #d9d9d9;
 }
 
-.login-content .input-div.one{
-	margin-top: 22px;
+.login-content .input-div.one {
+	margin-top: 0;
 }
 
-.i{
+.i {
 	color: #d9d9d9;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.i i{
+.i i {
 	transition: .3s;
 }
 
-.input-div > div{
-    position: relative;
+.input-div>div {
+	position: relative;
 	height: 45px;
 }
 
-.input-div > div > h5{
+.input-div>div>h5 {
 	position: absolute;
 	left: 10px;
 	top: 50%;
@@ -103,7 +103,8 @@ form{
 	transition: .3s;
 }
 
-.input-div:before, .input-div:after{
+.input-div:before,
+.input-div:after {
 	content: '';
 	position: absolute;
 	bottom: -2px;
@@ -113,28 +114,29 @@ form{
 	transition: .4s;
 }
 
-.input-div:before{
+.input-div:before {
 	right: 50%;
 }
 
-.input-div:after{
+.input-div:after {
 	left: 50%;
 }
 
-.input-div.focus:before, .input-div.focus:after{
+.input-div.focus:before,
+.input-div.focus:after {
 	width: 50%;
 }
 
-.input-div.focus > div > h5{
+.input-div.focus>div>h5 {
 	top: -5px;
 	font-size: 15px;
 }
 
-.input-div.focus > .i > i{
+.input-div.focus>.i>i {
 	color: #999;
 }
 
-.input-div > div > input{
+.input-div>div>input {
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -149,21 +151,26 @@ form{
 	font-family: 'poppins', sans-serif;
 }
 
-.input-div.pass{
+.input-div.pass {
 	margin-bottom: 4px;
 }
-#chekbox{
+
+#chekbox {
 	display: flex;
 	color: rgb(229, 226, 226);
+	;
 }
-.radio{
+
+.radio {
 	margin-left: 3%;
 }
-.check{
+
+.check {
 	max-width: 25%;
 	max-height: 25%;
 }
-span{
+
+span {
 	display: inline-block;
 	width: 100%;
 	text-align: left;
@@ -174,7 +181,8 @@ span{
 	color: rgb(226, 223, 223);
 	margin-top: 5%;
 }
-a{
+
+a {
 	display: inline-block;
 	text-align: right;
 	text-decoration: none;
@@ -183,12 +191,23 @@ a{
 	transition: .3s;
 }
 
-a:hover{
-	color:#2952a3;
+a:hover {
+	color: #2952a3;
 
 }
 
-.btn{
+.mb-3 {
+	display: inline-block;
+	width: 100%;
+	text-align: left;
+	color: #999;
+	font-size: 0.9rem;
+	transition: .3s;
+	color: rgb(226, 223, 223);
+	margin-bottom: 1em;
+}
+
+.btn {
 	display: block;
 	width: 100%;
 	height: 50px;
@@ -205,10 +224,7 @@ a:hover{
 	cursor: pointer;
 	transition: .5s;
 }
-.btn:hover{
+
+.btn:hover {
 	background-position: right;
 }
-.mb-3{
-	color: rgb(229, 226, 226);
-}
-

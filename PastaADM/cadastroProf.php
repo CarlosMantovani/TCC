@@ -17,7 +17,12 @@ if (isset($_POST['cadastrar'])) {
                     values ('$nome', '$email', '$siape', '$senha', '$imagem')";
         //die($sql);
         mysqli_query($conexao, $sql);
-        header("location: index.php");
+        echo '<script>
+        window.location.href="cadastroProf.php";
+        alert("Professor Cadastrado com sucesso");
+</script>';
+      
+        $mensagem = "ERRO AO CADASTRAR USUÁRIO. IMAGEM NÃO ENVIADA.";
     }
     else {
         $mensagem = "ERRO AO CADASTRAR USUÁRIO. IMAGEM NÃO ENVIADA.";

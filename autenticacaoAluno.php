@@ -1,18 +1,18 @@
 <?php
 $conexao = mysqli_connect('127.0.0.1', 'root', '', 'hereiam');
-if(isset($_POST['entrar'])):
+if (isset($_POST['entrar'])):
 
-      
 
-    $email= $_POST['email'];
+
+    $email = $_POST['email'];
     $senha = $_POST['senha'];
 
-    $sql = "select * from aluno where email = '{$email}' and senha = '{$senha}'";  
+    $sql = "select * from aluno where email = '{$email}' and senha = '{$senha}'";
 
     $resultado = mysqli_query($conexao, $sql);
     $numLinhas = mysqli_num_rows($resultado);
 
-    if ($numLinhas > 0){
+    if ($numLinhas > 0) {
         $linha = mysqli_fetch_assoc($resultado);
 
         session_start();
@@ -20,8 +20,10 @@ if(isset($_POST['entrar'])):
         $_SESSION['aluno_nome'] = $linha['nome'];
         $_SESSION['aluno_imagem'] = $linha['imagem'];
         header("location: salaDeAulaAluno.php");
-    }else{
-        $mensagem = "Usuario/Senha invalidos";
-    header("location: index.php?mensagem={$mensagem}");
+    } else {
+      echo '<script>
+        window.location.href="index-login.php";
+        alert("Senha/Usuario Incorreto");
+</script>';
     }
 endif;

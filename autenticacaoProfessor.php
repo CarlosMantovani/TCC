@@ -1,29 +1,32 @@
 <?php
 $conexao = mysqli_connect('127.0.0.1', 'root', '', 'hereiam');
-    if(isset($_POST['entrar'])):
+if (isset($_POST['entrar'])):
 
 
-        $email= $_POST['email'];
-        $senha = $_POST['senha'];
-        
-        $sql = "select * from prof where email = '{$email}' and senha = '{$senha}'";  
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
 
-$resultado = mysqli_query($conexao, $sql);
-$numLinhas = mysqli_num_rows($resultado);
+    $sql = "select * from prof where email = '{$email}' and senha = '{$senha}'";
 
-if ($numLinhas > 0){
-    $linha = mysqli_fetch_assoc($resultado);
-   
-    session_start();
-    $_SESSION['prof_id'] = $linha['idProf'];
-    $_SESSION['prof_nome'] = $linha['nome'];
-    $_SESSION['prof_imagem'] = $linha['imagem'];
- 
-    header("location: salaDeAula.php");
+    $resultado = mysqli_query($conexao, $sql);
+    $numLinhas = mysqli_num_rows($resultado);
 
-} else {
-   $mensagem = "Usuario/Senha invalidos";
-}
-    endif;
-    
+    if ($numLinhas > 0) {
+        $linha = mysqli_fetch_assoc($resultado);
+
+        session_start();
+        $_SESSION['prof_id'] = $linha['idProf'];
+        $_SESSION['prof_nome'] = $linha['nome'];
+        $_SESSION['prof_imagem'] = $linha['imagem'];
+
+        header("location: salaDeAula.php");
+
+    } else {
+        echo '<script>
+        window.location.href="index-login-professor.php";
+        alert("Senha/Usuario Incorreto");
+</script>';
+    }
+endif;
+
 ?>
